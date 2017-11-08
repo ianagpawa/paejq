@@ -8,21 +8,24 @@
         <title>Sample Checkout</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link type="text/css" rel='stylesheet' href="/css/style.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
         
+        <!-- <script src="/js/secrets.js"></script> -->
         <script src="/js/main.js"></script>
+
 
     </head>
     <body>
         <div class='col-md-12'>
             <div class='col-md-2 col-md-offset-5'>
-                    <div id='bread-button' class='bread-embed bread-btn bread-logged-out' style="visibility: visible;">
+                    <div id='bread-button' data-bread-default-size="true" class='bread-embed bread-btn bread-logged-out' style="visibility: visible;">
                         <div class="bread-embed-inner">
                             <div class='bread-center'>
                                 <div id="bread-center-inner" class='bread-center-inner'>
-                                    <div class='bread-text bread-pot'>
-                                        Pay over time
+                                    <div class='bread-text .bread-as-low-as bread-pot'>
                                     </div>
                                 </div>
 
@@ -33,28 +36,5 @@
 
             </div>
         </div>
-
-
-
-<!-- <form id="bread-checkout-form" action="/confirm" method="POST">
-<script>
-var opts = {
-    buttonId: 'bread-button',
-    actAsLabel: false,
-    asLowAs: true,
-    items: [
-        {
-            name: 'Couch',
-            price: 100,
-            sku: 'COUCH123',
-            imageUrl: 'https://i.imgur.com/bxeiKlV.png',
-            detailUrl: 'https://i.imgur.com/bxeiKlV.png',
-            quantity: 1
-        }]
-};
-bread.checkout(opts);
-</script>
-</form> -->
-        <h1 id='test'></h1>
     </body>
 </html>

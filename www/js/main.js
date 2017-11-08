@@ -1,24 +1,5 @@
-// var opts = {
-//     buttonId: 'bread-button',
-//     actAsLabel: false,
-//     asLowAs: true,
-//     items: [
-//         {
-//         name:'Couch',
-//         price:150000,
-//         sku:'COUCH123',
-//         imageUrl:'https://i.imgur.com/bxeiKlV.png',
-//         detailUrl:'https://i.imgur.com/bxeiKlV.png',
-//         quantity: 1
-//         }]
-//     };
-//     document.getElementById('bread-button').addEventListener('click', function(e) {
-//         bread.showCheckout(opts)
-//     });
-// // bread.checkout(opts);
 
-
-function displayAll(){
+function breadButton(){
     var opts = {
         buttonId: 'bread-button',
         actAsLabel: false,
@@ -59,5 +40,8 @@ function displayAll(){
     bread.checkout(opts);
 }
 
+function allBread(){
+    breadButton();
+}
 
-$(document).ready(displayAll);
+$(document).ready(allBread);
