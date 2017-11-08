@@ -1,4 +1,3 @@
-
 function breadButton(){
     var opts = {
         buttonId: 'bread-button',
@@ -15,8 +14,9 @@ function breadButton(){
             }]
     };
 
-    // opts.customCSS = '.bread-text { color: red; } #bread-button { background-color: #067899; height: 20px; width: 150px; text-align: center;}'
+    opts.allowCheck=false;
 
+    // opts.customCSS = '.bread-text { color: red; } #bread-button { background-color: #067899; height: 20px; width: 150px; text-align: center;}'
 
     opts.calculateTax = function(shippingContact, callback) {
         if (shippingContact.state == 'NY') {
@@ -27,7 +27,6 @@ function breadButton(){
         callback(null, tax)
     }
 
-    opts.allowCheck=false;
 
     opts.shippingOptions = [{
             typeId: 1,
@@ -39,7 +38,6 @@ function breadButton(){
             cost: 2000,
             type: "Overnight shipping"
     }];
-
 
 
     opts.done = function(err, tx_token) {
@@ -63,7 +61,6 @@ function breadButton(){
         }
         return;
     };
-
 
 
     bread.checkout(opts);
