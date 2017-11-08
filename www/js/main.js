@@ -7,13 +7,54 @@ function breadButton(){
         items: [
             {
                 name: 'Couch',
-                price: 100,
+                price: 10000,
                 sku: 'COUCH123',
                 imageUrl: 'https://i.imgur.com/bxeiKlV.png',
                 detailUrl: 'https://i.imgur.com/bxeiKlV.png',
                 quantity: 1
             }]
     };
+
+
+    opts.allowCheck=false
+
+    // opts.calculateTax = function(shippingContact, callback) {
+        // if (shippingContact.state == 'NY') {
+        //     // console.log(opts.items[0].price * opts.items[0].quantity * 0.05)
+        //     callback(opts.items[0].price * opts.items[0].quantity * 0.05)
+        // }
+        // $.ajax({
+        //     url: '/tax',
+        //     type: 'POST',
+        //     contentType: 'application/json',
+        //     data: JSON.stringify({
+        //         shippingAddress: shippingContact,
+        //         total: opts.items[0].price * opts.items[0].quantity
+        //     })
+        // })
+        // .done(function(data){
+        //     callback(null, data);
+        // })
+        // .fail(function(err){
+        //     callback(err);
+        // });
+
+    // };
+    //
+    //
+    opts.shippingOptions = [{
+            typeId: 1,
+            cost: 800,
+            type: "Two-day shipping"
+        },
+        {
+            typeId: 2,
+            cost: 2000,
+            type: "Overnight shipping"
+        }];
+    // opts.calculateShipping = function(shippingContact, callback) {
+
+
 
     opts.done = function(err, tx_token) {
         if (err) {

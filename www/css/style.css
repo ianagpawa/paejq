@@ -17,6 +17,7 @@
     line-height: normal;
 }
 
+
 #bread-button:hover {
     background: #067899;
     background-image: -webkit-linear-gradient(top, #067899, #145b7b);
@@ -28,6 +29,9 @@
     text-decoration: none;
 }
 
+.bread-text{
+    color: red;
+}
 
 #test{
     color: red
