@@ -15,33 +15,20 @@ function breadButton(){
             }]
     };
 
+    // opts.customCSS = '.bread-text { color: red; } #bread-button { background-color: #067899; height: 20px; width: 150px; text-align: center;}'
 
-    opts.allowCheck=false
 
-    // opts.calculateTax = function(shippingContact, callback) {
-        // if (shippingContact.state == 'NY') {
-        //     // console.log(opts.items[0].price * opts.items[0].quantity * 0.05)
-        //     callback(opts.items[0].price * opts.items[0].quantity * 0.05)
-        // }
-        // $.ajax({
-        //     url: '/tax',
-        //     type: 'POST',
-        //     contentType: 'application/json',
-        //     data: JSON.stringify({
-        //         shippingAddress: shippingContact,
-        //         total: opts.items[0].price * opts.items[0].quantity
-        //     })
-        // })
-        // .done(function(data){
-        //     callback(null, data);
-        // })
-        // .fail(function(err){
-        //     callback(err);
-        // });
+    opts.calculateTax = function(shippingContact, callback) {
+        if (shippingContact.state == 'NY') {
+            tax = opts.items[0].price * opts.items[0].quantity * 0.05
+        } else {
+            tax = 0
+        }
+        callback(null, tax)
+    }
 
-    // };
-    //
-    //
+    opts.allowCheck=false;
+
     opts.shippingOptions = [{
             typeId: 1,
             cost: 800,
@@ -51,8 +38,7 @@ function breadButton(){
             typeId: 2,
             cost: 2000,
             type: "Overnight shipping"
-        }];
-    // opts.calculateShipping = function(shippingContact, callback) {
+    }];
 
 
 
@@ -78,11 +64,10 @@ function breadButton(){
         return;
     };
 
+
+
     bread.checkout(opts);
 }
 
-function allBread(){
-    breadButton();
-}
 
-$(document).ready(allBread);
+$(document).ready(breadButton);
