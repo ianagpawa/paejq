@@ -19,11 +19,8 @@ function breadButton(){
     // opts.customCSS = '.bread-text { color: red; } #bread-button { background-color: #067899; height: 20px; width: 150px; text-align: center;}'
 
     opts.calculateTax = function(shippingContact, callback) {
-        if (shippingContact.state == 'NY') {
-            tax = opts.items[0].price * opts.items[0].quantity * 0.05
-        } else {
-            tax = 0
-        }
+        var tax = (shippingContact.state == 'NY') ? (opts.items[0].price * opts.items[0].quantity * 0.05) : (0);
+
         callback(null, tax)
     }
 
