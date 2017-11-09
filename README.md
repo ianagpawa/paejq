@@ -1,4 +1,6 @@
-# Bread Button    
+# Checkout Button    
+
+### This repo is for a take home assignment.  
 
 #### Dependencies
 This app requires `google app engine (python)` and `gcloud` installed on your system.

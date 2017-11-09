@@ -4,3 +4,8 @@
 cartCreate
 
 https://checkout-sandbox.getbread.com/7HJdEi
+
+
+Overall, the documentation is well-written, easy to follow, and has good examples.  There were a few places though where I found minor difficulty.
+
+The first difficulty I encountered was during the setup.  
