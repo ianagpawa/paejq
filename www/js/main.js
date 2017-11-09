@@ -18,7 +18,6 @@ function breadButton(){
 
     opts.calculateTax = function(shippingContact, callback) {
         var tax = (shippingContact.state == 'NY') ? (opts.items[0].price * opts.items[0].quantity * 0.05) : (0);
-
         callback(null, tax);
     }
 
@@ -81,9 +80,7 @@ function breadButton(){
     }
 
     #bread-button.bread-btn:hover {
-
      /* Overall button hover styles */
-
      background: #222;
 
     }

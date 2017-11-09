@@ -30,7 +30,4 @@ peajq/
 
 **Ian Agpawa**
 
-
-[Github](https://github.com/ianagpawa)
-
  agpawaji@gmail.com
