@@ -16,7 +16,79 @@ function breadButton(){
 
     opts.allowCheck=false;
 
-    // opts.customCSS = '.bread-text { color: red; } #bread-button { background-color: #067899; height: 20px; width: 150px; text-align: center;}'
+    opts.customCSS = `
+    html, body, #bread-button {
+     height: 100%;
+     margin: 0;
+     width: 100%;
+    }
+
+    body {
+     display: table;
+    }
+
+    #bread-button {
+     /* Base button styles */
+     background: #2A2A2A;
+     color: #FF0000;
+     display: table-cell;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 20px;
+     text-align: center;
+     vertical-align: middle;
+     height: 100px;
+     width: 300px;
+    }
+
+    #bread-button.bread-btn:hover {
+
+     /* Overall button hover styles */
+
+     background: #222;
+
+    }
+
+    .bread-btn {
+     cursor: pointer;
+    }
+
+    .bread-embed-inner, .bread-label .bread-embed-icon {
+     display: inline-block;
+    }
+
+    .bread-label .bread-embed-icon:after {
+
+     /* Icon that shows the bread tooltip on hover */
+     background: rgba(255, 255, 255, 0.5);
+     border-radius: 50px;
+     color: #333;
+     content: 'i';
+     cursor: pointer;
+     display: inline-block;
+     line-height: 1;
+     margin-left: 8px;
+     padding: 4px 9px;
+    }
+
+    .bread-pot:before {
+
+    /* Content for the default state. */
+     content: 'Pay Over Time';
+    }
+
+    .bread-btn .bread-as-low-as:before,
+    .bread-label .bread-as-low-as:before {
+
+     content: 'As low as ';
+    }
+
+    .bread-for:before {
+
+     /* Prefix for logged in users */
+     content: 'For ';
+    }
+    `
+
 
     opts.calculateTax = function(shippingContact, callback) {
         var tax = (shippingContact.state == 'NY') ? (opts.items[0].price * opts.items[0].quantity * 0.05) : (0);
@@ -58,7 +130,6 @@ function breadButton(){
         }
         return;
     };
-
 
     bread.checkout(opts);
 }
