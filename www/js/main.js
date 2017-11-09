@@ -102,12 +102,10 @@ function breadButton(){
     }
 
     .bread-for:before {
-
      /* Prefix for logged in users */
      content: 'For ';
     }
     `
-
     bread.checkout(opts);
 }
 
