@@ -3,25 +3,23 @@
 ### This repo is for a take home assignment.  
 
 #### Dependencies
-This app requires `google app engine (python)` and `gcloud` installed on your system.
+This app requires `python` to be installed on your system.
 
 #### Viewing the app locally
 While the terminal is in the root directory, run the following command:
 ```
-$   dev_appserver.py .
+$   python -m SimpleHTTPServer 8000
 ```
+Then, open your browser to `localhost:8000` to view the app.
 
 ### File structure
 Within the project folder, you will find the following files:
 
 ```
 peajq/
-    ├── www/
-    |    ├── js/
-    |    |    └──  main.jss
-    |    └── index.html
     ├── .gitignore
-    ├── app.yaml
+    ├── index.html
+    ├── main.jss
     ├── notes.txt
     └── README.py
 ```
