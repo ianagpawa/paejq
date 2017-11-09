@@ -96,29 +96,8 @@ function breadButton(){
      display: inline-block;
     }
 
-    .bread-label .bread-embed-icon:after {
-
-     /* Icon that shows the bread tooltip on hover */
-     background: rgba(255, 255, 255, 0.5);
-     border-radius: 50px;
-     color: #333;
-     content: 'i';
-     cursor: pointer;
-     display: inline-block;
-     line-height: 1;
-     margin-left: 8px;
-     padding: 4px 9px;
-    }
-
-    .bread-pot:before {
-
-    /* Content for the default state. */
-     content: 'Pay Over Time';
-    }
-
     .bread-btn .bread-as-low-as:before,
     .bread-label .bread-as-low-as:before {
-
      content: 'As low as ';
     }
 
