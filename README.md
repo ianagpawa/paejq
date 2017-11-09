@@ -17,7 +17,6 @@ Within the project folder, you will find the following files:
 
 ```
 peajq/
-    ├── .gitignore
     ├── index.html
     ├── main.jss
     ├── notes.txt
