@@ -5,11 +5,11 @@ function breadButton(){
         asLowAs: true,
         items: [
             {
-                name: 'Couch',
+                name: 'Chair',
                 price: 10000,
-                sku: 'COUCH123',
-                imageUrl: 'https://thumb9.shutterstock.com/display_pic_with_logo/277009/634628642/stock-photo-comfortable-blue-couch-and-wooden-coffee-table-in-simple-white-apartment-634628642.jpg',
-                detailUrl: 'https://i.imgur.com/bxeiKlV.png',
+                sku: 'CHAIR123',
+                imageUrl: 'https://thumb9.shutterstock.com/display_pic_with_logo/286780/407406052/stock-photo-modern-office-chair-from-red-leather-isolated-407406052.jpg',
+                detailUrl: 'https://www.getbread.com',
                 quantity: 1
             }]
     };
@@ -76,8 +76,8 @@ function breadButton(){
      font-size: 20px;
      text-align: center;
      vertical-align: middle;
-     height: 100px;
-     width: 300px;
+     height: 70px;
+     width: 250px;
     }
 
     #bread-button.bread-btn:hover {
